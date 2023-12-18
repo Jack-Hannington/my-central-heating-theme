@@ -1,20 +1,20 @@
 /*
-Theme Name: Altius Healthcare 2023
-Theme URI: http://hanningtondigital.com/altius
+Theme Name: Cheshire Joint Injections 2023
+Theme URI: http://hanningtondigital.com/projects/cheshirejointinjections
 Author: Jack Hannington
 Author URI: hannigtondigital.com
-Description: Customisable light theme for Altius Healthcare
+Description: Customisable theme for My Central Heating
 Version: 1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: altius_healthcare
+Text Domain: cheshire_joint_injections
 */
 
 :root {
-  --bg-color: #F6F5F5;
+  --bg-color: #fff;
   --body-text-color: #051F29;
   --altius-dark-grey: #414548;
-  --light-grey: #ededed;
+  --light-grey: #eeeeee;
   --body-font-size: 1rem;
   --orange: #F16E00;
   --bronze: #D2881B;
@@ -83,12 +83,19 @@ body {
 .bronze {
   color:var(--bronze);
 }
+
+.border-bronze {
+  border:1px solid var(--bronze)
+}
 .background-bronze {
   background-color:var(--bronze);
 }
 
 .silver {
   color:var(--silver);
+}
+.border-silver {
+  border:1px solid var(--silver)
 }
 .background-silver {
   background-color:var(--silver);
@@ -100,6 +107,17 @@ body {
 .background-gold {
   background-color:var(--gold);
 }
+.border-gold {
+  border:1px solid var(--gold)
+}
+
+.darkblue {
+  color:var(--dark-blue);
+}
+
+.background-darkblue {
+  background-color:var(--dark-blue);
+}
 
 
 
@@ -109,7 +127,7 @@ nav {
   width: 100%;
   margin: 0;
   position: fixed;
-  background-color:white;
+  background-color:var(--dark-blue);
   transition: 0.3s ease-in;
   top: 0;
   box-shadow: 0px 3px 7px 3px rgb(0 0 0 / 23%);
@@ -139,7 +157,7 @@ nav {
 }
 
 .custom-logo {
-  min-width: 200px;
+  min-width: 170px;
   height: auto;
   transition: 0.3s ease-in;
 }
@@ -221,7 +239,6 @@ nav {
   padding: 15px 15px;
   height: 100%;
   display: block;
-  font-weight: 300;
   transition: 0.3s ease-in;
 }
 
@@ -342,6 +359,35 @@ nav {
   }
 }
 
+/* Sidebar offers */
+
+.sidebar-offers {
+  font-size: 14px;
+}
+
+@media (min-width:996px){
+  .sidebar-offers {
+        display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+.sidebar-offers .offer {
+  width: 320px;
+}
+.sidebar-offers {
+  position: sticky;
+  top: 100px;
+}
+}
+
+@media (max-width:996px){
+  .sidebar-offers {
+    margin-top:40px;
+    font-size: 16px;
+  }
+}
+
+
 
 /* Hide sub-menu by default */
 .sub-menu {
@@ -408,7 +454,6 @@ nav {
     justify-content: end;
     white-space: nowrap;
     font-size: 0.9rem;
-    font-weight: 300;
   }
 
   .menu-body li {
@@ -416,7 +461,7 @@ nav {
   }
 
   .menu li a {
-    color: var(--body-text-color);
+    /* color: var(--body-text-color); */
     padding:10px 15px;
   }
 
@@ -516,16 +561,16 @@ nav {
 /* Mountain background */
 
 .mountain-bg {
-  background-image: url('https://www.altiushealthcare.co.uk/wp-content/uploads/2023/06/Mountain_bg_left_crop-1.png');
+  background-image: url('http://cheshire-joint-injections.local/wp-content/uploads/2023/12/Logo-background-image.png');
   background-repeat: no-repeat;
-  background-size:cover;
+  background-size:contain;
 }
 
 
 .mountain-bg-right {
-  background-image: url('https://www.altiushealthcare.co.uk/wp-content/uploads/2023/06/Mountain_bg_right_100-1.png');
+  background-image: url('http://cheshire-joint-injections.local/wp-content/uploads/2023/12/Logo-background-image.png');
   background-repeat: no-repeat;
-  background-size:cover;
+  background-size:contain;
   background-position: right;
 }
 
@@ -719,6 +764,7 @@ button, .btn {
   padding-bottom:2.2rem!important;
 }
 
+
 /* Images */
 
 img {
@@ -846,7 +892,7 @@ input, textarea {
 
 /* Autoscrolling slider */
 .logo-slider {
-  --image-size: 300px;
+  --image-size: 350px;
   padding: 20px;
   overflow: hidden;
   width: 100%;
@@ -860,7 +906,7 @@ input, textarea {
 .logo-slider div {
   display: flex;
   position: relative;
-  animation: marquee 20s linear infinite;
+  animation: marquee 40s linear infinite;
   justify-content: space-around;
 }
 .logo-slider img {
@@ -1036,8 +1082,21 @@ ul.ticks li::before {
   font-family: "Font Awesome 5 Free"; 
   display: inline-block;
   margin-right: 10px; 
-  color: var(--orange);
+  color: var(--tick-color, var(--orange)); /* Default color for ::before */
 }
+
+ul.bronzeticks li::before {
+  --tick-color: var(--bronze);
+}
+
+ul.silverticks li::before {
+  --tick-color: var(--silver);
+}
+
+ul.goldticks li::before {
+  --tick-color: var(--gold);
+}
+
 ul.ticks li {
   padding-top: 6px; 
 }
@@ -1241,6 +1300,7 @@ details {
 
 .site-footer {
   border-top:1px solid #ededed;
+  background-color:white;
 }
 
 .footer-menu li {
@@ -1262,5 +1322,5 @@ footer .custom-logo {
 
 .footer-header {
   font-weight:400;
-  color:white;
+ 
 }
