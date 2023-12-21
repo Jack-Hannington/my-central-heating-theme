@@ -1,5 +1,5 @@
 /*
-Theme Name: Cheshire Joint Injections 2023
+Theme Name: My Central Heating 2024
 Theme URI: http://hanningtondigital.com/projects/cheshirejointinjections
 Author: Jack Hannington
 Author URI: hannigtondigital.com
@@ -7,13 +7,13 @@ Description: Customisable theme for My Central Heating
 Version: 1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: cheshire_joint_injections
+Text Domain: my_central_heating
 */
 
 :root {
   --bg-color: #fff;
-  --body-text-color: #051F29;
-  --altius-dark-grey: #414548;
+  --body-text-color: #003755;
+  --dark-grey: #414548;
   --light-grey: #eeeeee;
   --body-font-size: 1rem;
   --orange: #F16E00;
@@ -58,11 +58,15 @@ body {
   font-family: 'Inter', sans-serif;
   font-weight: 400;
   font-size: 1rem;
-  color: #212529;
+  color: var(--body-text-color)!important;
   text-align: left;
   line-height: 1.6;
   background-color: var(--bg-color);
   height: 100%;
+}
+
+.card {
+  color: var(--body-text-color);
 }
 
 /*---- Colours ----*/
@@ -117,6 +121,10 @@ body {
 
 .background-darkblue {
   background-color:var(--dark-blue);
+}
+
+.wp-block-cover h1:not(.has-text-color), .wp-block-cover h2:not(.has-text-color), .wp-block-cover h3:not(.has-text-color), .wp-block-cover h4:not(.has-text-color), .wp-block-cover h5:not(.has-text-color), .wp-block-cover h6:not(.has-text-color), .wp-block-cover p:not(.has-text-color), .wp-block-cover-image h1:not(.has-text-color), .wp-block-cover-image h2:not(.has-text-color), .wp-block-cover-image h3:not(.has-text-color), .wp-block-cover-image h4:not(.has-text-color), .wp-block-cover-image h5:not(.has-text-color), .wp-block-cover-image h6:not(.has-text-color), .wp-block-cover-image p:not(.has-text-color) {
+  color:var(--body-text-color);
 }
 
 
@@ -588,6 +596,9 @@ nav {
 .max-450 {
   max-width: 450px;
 }
+.max-500 {
+  max-width: 500px;
+}
 .max-650 {
   max-width: 650px;
 }
@@ -613,6 +624,9 @@ h6 {
 } */
 
 
+
+
+
 h1 {
   font-weight: 900;
   letter-spacing: -0.5px;
@@ -620,9 +634,9 @@ h1 {
 
 
 @media (min-width : 1200px) {
-  h1 {
-    font-size: 3rem;
-    line-height: 3.1rem;
+  .heading-h1 {
+    font-size: 3.5rem;
+    line-height: 3.6rem;
   }
 }
 
@@ -779,7 +793,7 @@ figure {
 
 .card {
   border-radius: 4px;
-  padding:14px;
+  padding:18px;
   transition:0.3s ease-in; 
   min-width: 250px;
   /* font-size: 0.9rem; */
@@ -1104,7 +1118,6 @@ ul.ticks li {
 
 /* Details element */
 details > summary {
-   font-weight: 500;
    font-size:16px;
 }
 
@@ -1112,6 +1125,11 @@ details {
   padding:10px;
   background-color: #fff;
   border:1px solid var(--light-grey);
+}
+
+.cover-details summary, details {
+   color:rgb(69, 69, 69);
+   font-size:12px;
 }
 
 /* Altius Services ring */

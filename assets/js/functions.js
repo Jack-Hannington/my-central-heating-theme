@@ -96,7 +96,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
   const blocks = document.querySelectorAll('.wp-block-group');
    
   blocks.forEach((block) => {
-    console.log(block);
       block.classList.forEach((className) => {
           if (className.startsWith('aos-')) {
               const animationName = className.split('aos-')[1];
@@ -111,6 +110,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
       duration: 700,
   });
 });
+
+
 
 
 
