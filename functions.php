@@ -65,7 +65,7 @@ function register_my_menus()
 {
     register_nav_menus([
         "header-menu" => __("Header Menu"),
-        "clinic-menu" => __("Clinic Menu"),
+        "policies-menu" => __("Policies Menu"),
         "services-menu" => __("Services Menu"),
         "company-menu" => __("Company Menu"),
     ]);

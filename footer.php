@@ -15,10 +15,21 @@
             </div>
             
             <!-- Main Menu Navigation -->
-            <div class="col-lg-6 col-md-6 col-12 mb-4">
-                <h5 class="footer-header mb-3">Navigation</h5>
+            <div class="col-lg-3 col-md-6 col-12 mb-4">
+                <h5 class="footer-header mb-3">Services</h5>
                 <?php wp_nav_menu(array(
-                    'theme_location' => 'primary',
+                    'theme_location' => 'header-menu',
+                    'menu_class' => 'footer-menu list-unstyled',
+                    'fallback_cb' => false,
+                    'container' => false
+                )); ?>
+            </div>
+            
+            <!-- Company Section -->
+            <div class="col-lg-3 col-md-6 col-12 mb-4">
+                <h5 class="footer-header mb-3">Company</h5>
+                <?php wp_nav_menu(array(
+                    'theme_location' => 'company-menu',
                     'menu_class' => 'footer-menu list-unstyled',
                     'fallback_cb' => false,
                     'container' => false
@@ -26,13 +37,14 @@
             </div>
             
             <!-- Policies Section -->
-            <div class="col-lg-3 col-md-12 col-12 mb-4">
+            <div class="col-lg-3 col-md-6 col-12 mb-4">
                 <h5 class="footer-header mb-3">Policies</h5>
-                <ul class="footer-menu list-unstyled">
-                    <li><a href="/privacy-policy" class="text-decoration-none">Privacy Policy</a></li>
-                    <li><a href="/terms-conditions" class="text-decoration-none">Terms & Conditions</a></li>
-                    <li><a href="/cookie-policy" class="text-decoration-none">Cookie Policy</a></li>
-                </ul>
+                <?php wp_nav_menu(array(
+                    'theme_location' => 'policies-menu',
+                    'menu_class' => 'footer-menu list-unstyled',
+                    'fallback_cb' => false,
+                    'container' => false
+                )); ?>
             </div>
         </div>
     </div>

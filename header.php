@@ -31,7 +31,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- Start of Navbar -->
 <div class="utility-bar" style="border-bottom:1px solid #ededed;">
   <div class="text-muted small container" >
-  <p>Call 0161 794 3030 | Mon-Fri: 9am-5:30pm | Sat: 9am-5pm</p>
+  <p><a href="tel:0161 794 3030">Call 0161 794 3030 </a> (Option 2) <span class="d-none d-lg-inline">| Mon-Fri: 9am-5:30pm | Sat: 9am-5pm</span></p>
 </div>
 </div>
 <nav>
@@ -89,7 +89,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         )); ?>
       </div>
       <div class="menu-footer">
-      <button class="altius-btn__primary wp-block-button__link ">
+      <button class="wp-block-button__link ">
         <a href="/boiler-cover" title="cover">Get cover</a>
         
       </button>
@@ -108,9 +108,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </div>
     <div id="nav-cta" class="nav-item menu-cta">
-      <button class="altius-btn__primary wp-block-button__link ">
-        <a href="/boiler-cover" title="book appointment">Get cover</a>
-      </button>
+     
+        <a href="/boiler-cover" class="fw-semibold" title="book appointment">Get cover -></a>
+     
     </div>
   </div>
 </nav>
